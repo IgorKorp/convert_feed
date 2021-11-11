@@ -1,0 +1,55 @@
+AllCops:
+  TargetRubyVersion: 2.7
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Layout/LineLength:
+  Max: 120
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/BlockLength:
+  Max: 40
+
+Metrics/ModuleLength:
+  Max: 150
+  Exclude:
+    - 'test/support/support_hash.rb'
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Style/NumericLiterals:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 40
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+#Security/Open:
+#  Enabled: false
+
