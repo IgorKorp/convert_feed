@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-lib = File.expand_path File.join(File.dirname(__FILE__), 'lib')
+
+lib = File.expand_path File.join(File.dirname(__FILE__), "lib")
 $:.unshift lib unless $:.include?(lib)
 
 require_relative "lib/convert_feed/version"

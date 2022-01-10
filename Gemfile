@@ -12,3 +12,7 @@ gem "minitest", "~> 5.0"
 gem "rubocop", "1.22.3"
 
 gem "rss"
+
+gem "json"
+
+gem "ostruct"

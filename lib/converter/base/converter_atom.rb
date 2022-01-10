@@ -8,9 +8,9 @@ module Converters
 
     def self.convert(hash)
       RSS::Maker.make(VERSION) do |maker|
-        maker.channel.updated = hash[:update] || Time.now
+        maker.channel.updated =  hash[:updated] ? Time.at(hash[:updated]).xmlschema : Time.now
         maker.channel.title = hash[:title] || "unknown"
-        maker.channel.id = hash[:id] || "unknown"
+        maker.channel.id = hash[:id].to_s || "unknown"
         maker.channel.author = hash[:author] || "unknown"
 
         hash[:items].each do |item|

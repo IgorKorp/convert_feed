@@ -7,8 +7,12 @@ module Modifier
     modified_hash
   end
 
-  def self.sort(items)
+  def self.asc(items)
     items.sort_by { |item| item[:date] }
+  end
+
+  def self.desc(items)
+    items.sort_by { |item| -item[:date] }
   end
 
   def self.reverse(items)

@@ -5,7 +5,7 @@ module FileReader
 
   def self.read(file)
     File.read(file)
-    rescue StandardError
+  rescue StandardError
     nil
   end
 end

@@ -7,8 +7,8 @@ options = { modifiers: [], output: false, format: :default }
 OptionParser.new do |o|
   o.banner = "Usage convert-feed [options]"
   o.on("-r", "--reverse", "Reverse") { options[:modifiers] << :reverse }
-  o.on("-s", "--sort", "Sort by date") { options[:modifiers] << :sort }
-  o.on("-f", "--format FORMAT", "Select format: rss, atom, xml") { |format| options[:format] = format.downcase.to_sym }
+  o.on("-f", "--format FORMAT", "Select format: rss, atom, xml") { |format| options[:format] = format.downcase.gsub(/=/, "").to_sym }
+  o.on("-s", "--sort TYPE", "sort item asc or desc.") { |sort| options[:modifiers] << sort.gsub(/=/, "").downcase.to_sym }
   o.on("-o", "--output PATH", "Output info display or file. Default display") { |output| options[:output] = output }
   o.on("-h", "--help", "Help doc!") { return puts o }
 end.parse!

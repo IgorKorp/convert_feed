@@ -15,4 +15,7 @@ gem install convert-feed-0.1.0.gem
 ## Пример использования:
 ```bash
 convert-feed -h 
+
+
+convert-feed -f json  -s asc  https://ru.hexlet.io/lessons.rss
 ```

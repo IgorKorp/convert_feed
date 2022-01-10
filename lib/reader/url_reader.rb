@@ -7,7 +7,7 @@ module UrlReader
 
   def self.read(url)
     URI.parse(url).open.read
-    rescue StandardError
-      nil
+  rescue StandardError
+    nil
   end
 end
